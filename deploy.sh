@@ -30,11 +30,6 @@ pull_latest(){
 	  git pull https://github.com/octocat/Spoon-Knife
 	fi
 }
-pull_latest(){
-	if [ -d /var/www/html/.git ]; then
-	  git pull https://github.com/octocat/Spoon-Knife /var/www/html/
-	fi
-}
 
 print_title
 print_date
