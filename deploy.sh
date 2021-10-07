@@ -1,7 +1,7 @@
 #! /bin/bash
 
 print_title(){
-	echo Deploy Srcipt
+	echo Deploy Script
 }
 
 print_date(){
