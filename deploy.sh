@@ -16,12 +16,12 @@ apt_update(){
 }
 remove_old_site(){
 	if [ ! -d /var/www/html/.git ]; then
-           rm -f /var/www/html/index.html
+          sudo rm -f /var/www/html/index.html
 	fi
 }
 clone_website_code(){
 	if [ ! -d /var/www/html/.git ]; then
-	  git clone https://github.com/octocat/Spoon-Knife /var/www/html/
+	  sudo git clone https://github.com/octocat/Spoon-Knife /var/www/html/
 	fi
 }
 
