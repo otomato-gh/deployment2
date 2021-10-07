@@ -25,8 +25,8 @@ clone_website_code(){
 }
 pull_latest(){
 	if [ -d /var/www/html/.git ]; then
-	  cd /var/www/html/
-	  git pull https://github.com/octocat/Spoon-Knife
+	  sudo cd /var/www/html/
+	  sudo git pull https://github.com/octocat/Spoon-Knife
 	fi
 }
 
@@ -34,7 +34,7 @@ apache_check(){
 
 	status=$(systemctl status apache2 | grep "Active: active" | wc -l)
 
-	if [ $status == 1] ; then
+	if [ $status == 1 ] ; then
 
 		echo OK
 
