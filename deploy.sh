@@ -24,6 +24,12 @@ clone_website_code(){
 	  sudo git clone https://github.com/octocat/Spoon-Knife /var/www/html/
 	fi
 }
+pull_latest(){
+	if [ -d /var/www/html/.git ]; then
+	  cd /var/www/html/
+	  git pull https://github.com/octocat/Spoon-Knife
+	fi
+}
 
 print_title
 print_date
@@ -32,3 +38,4 @@ install_package git
 install_package apache2
 remove_old_site
 clone_website_code
+pull_latest
