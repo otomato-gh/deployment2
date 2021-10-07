@@ -41,7 +41,7 @@ apache_check(){
 	else
 
 		echo Apache is not running
-
+        fi
 	}
 
 print_title
