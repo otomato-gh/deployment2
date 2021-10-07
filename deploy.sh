@@ -25,6 +25,20 @@ clone_website_code(){
 	fi
 }
 
+apache_check(){
+
+	status=$(systemctl status apache2 | grep "Active: active" | wc -l)
+
+	if [ $status == 1] ; then
+
+		echo OK
+
+	else
+
+		echo Apache is not running
+
+	}
+
 print_title
 print_date
 apt_update
