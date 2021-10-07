@@ -1,7 +1,7 @@
 #! /bin/bash
 
 print_title(){
-	echo Deploy Srcipt
+	echo Deploy Script
 }
 
 print_date(){
@@ -16,12 +16,18 @@ apt_update(){
 }
 remove_old_site(){
 	if [ ! -d /var/www/html/.git ]; then
-           rm -f /var/www/html/index.html
+          sudo rm -f /var/www/html/index.html
 	fi
 }
 clone_website_code(){
 	if [ ! -d /var/www/html/.git ]; then
-	  git clone https://github.com/octocat/Spoon-Knife /var/www/html/
+	  sudo git clone https://github.com/octocat/Spoon-Knife /var/www/html/
+	fi
+}
+pull_latest(){
+	if [ -d /var/www/html/.git ]; then
+	  cd /var/www/html/
+	  git pull https://github.com/octocat/Spoon-Knife
 	fi
 }
 
@@ -46,3 +52,4 @@ install_package git
 install_package apache2
 remove_old_site
 clone_website_code
+pull_latest
