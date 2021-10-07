@@ -1,6 +1,5 @@
 #! /bin/bash
 
-VSE HUYNYA
 
 print_title(){
 	echo Deploy Script
